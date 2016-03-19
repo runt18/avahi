@@ -21,12 +21,12 @@ import os, sys
 
 def print_includes(dir):
 
-    files = os.listdir("../%s" % dir)
+    files = os.listdir("../{0!s}".format(dir))
     files = filter(lambda fn: fn.endswith(".h") and not fn.startswith("."), files)
     files.sort()
 
     for f in files:
-        print "#include <%s/%s>" % (dir, f)
+        print "#include <{0!s}/{1!s}>".format(dir, f)
 
 
 print """/***

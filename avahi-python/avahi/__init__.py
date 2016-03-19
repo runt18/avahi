@@ -107,6 +107,6 @@ def dict_to_txt_array(txt_dict):
     l = []
 
     for k,v in txt_dict.items():
-        l.append(string_to_byte_array("%s=%s" % (k,v)))
+        l.append(string_to_byte_array("{0!s}={1!s}".format(k, v)))
 
     return l
